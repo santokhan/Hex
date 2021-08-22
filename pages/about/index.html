@@ -19,55 +19,28 @@
 <body>
     <header class="app__header">
         <nav class="app__navbar">
-            <div class="nav__container">
-                <button class="navbar__toggler" id="navToggler" data-target="appNav"><img width="24" src="img/toggler.svg" alt="toggler"></button>
-                <div class="dropdown__nav">
-                    <div class="app__nav" id="appNav">
-                        <a class="app__nav__link" href="#">Home</a>
-                        <a class="app__nav__link" href="#">Product <i class="fa fa-caret-down"></i></a>
-                        <a class="app__nav__link" href="#">Services</a>
-                        <a class="app__nav__link" href="#">Contact</a>
+            <div class="container-fluid p-0">
+                <div class="row align-items-center p-0">
+                    <div class="col-5 order-xl-1 order-2">
+                        <div class="app__nav">
+                            <a class="app__nav__link" href="#">Home</a>
+                            <a class="app__nav__link" href="#">Product <i class="fa fa-caret-down"></i></a>
+                            <a class="app__nav__link" href="#">Services</a>
+                            <a class="app__nav__link" href="#">Contact</a>
+                        </div>
                     </div>
-                    <div class="social__icon__clone">
-                        <a class="social__link" href="https://www.facebook.com/hexuidesign"><i class="fab fa-facebook"></i></a>
-                        <a class="social__link" href="https://www.instagram.com/hexuidesign"><i class="fab fa-instagram"></i></a>
-                        <a class="social__link" href="https://www.twitter.com/santokhan1999"><i class="fab fa-twitter"></i></a>
-                        <a class="social__link" href="https://www.linkedin.com/in/santokhan1999"><i class="fab fa-linkedin-in"></i></a>
+                    <div class="col-2 order-xl-2 order-1 d-flex justify-content-center"><object height="40" data="img/hex-logo.svg" type="text/svg"></object></div>
+                    <div class="col-5 order-xl-3 order-3 d-flex justify-content-end">
+                        <div class="social__icon">
+                            <a class="social__link" href="https://www.facebook.com/hexuidesign"><i class="fab fa-facebook"></i></a>
+                            <a class="social__link" href="https://www.instagram.com/hexuidesign"><i class="fab fa-instagram"></i></a>
+                            <a class="social__link" href="https://www.twitter.com/santokhan1999"><i class="fab fa-twitter"></i></a>
+                            <a class="social__link" href="https://www.linkedin.com/in/santokhan1999"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="logo"><object height="40" data="img/hex-logo.svg" type="text/svg+xml"></object></div>
-            <div class="social__icon">
-                <a class="social__link" href="https://www.facebook.com/hexuidesign"><i class="fab fa-facebook"></i></a>
-                <a class="social__link" href="https://www.instagram.com/hexuidesign"><i class="fab fa-instagram"></i></a>
-                <a class="social__link" href="https://www.twitter.com/santokhan1999"><i class="fab fa-twitter"></i></a>
-                <a class="social__link" href="https://www.linkedin.com/in/santokhan1999"><i class="fab fa-linkedin-in"></i></a>
-            </div>
         </nav>
-        <script>
-            {
-                function dropDown() {
-                    const toggler = document.getElementById("navToggler");
-                    const targetId = toggler.attributes["data-target"].value;
-                    const target = document.getElementById(targetId);
-                    let istoggle = false;
-                    function showHide() {
-                        if (!istoggle) {
-                            istoggle = true;
-                            target.classList.add("expand");
-                            toggler.style.transform = "rotate(45deg)";
-                            console.log(target);
-                        } else {
-                            istoggle = false;
-                            target.classList.remove("expand");
-                            toggler.style.transform = "rotate(0deg)";
-                        }
-                    }
-                    toggler.addEventListener("click", showHide);
-                }
-                dropDown();
-            }
-        </script>
     </header>
 
     <main class="app__main">
@@ -78,7 +51,7 @@
                         <div class="col-12 d-flex justify-content-center">
                             <div class="d-flex flex-column align-items-center">
                                 <h2 class="banner__txt">HEX</h2>
-                                <p>User Interface Builder</p>
+                                <p>UI BUILDER</p>
                             </div>
                         </div>
                     </div>
@@ -86,11 +59,11 @@
             </div>
         </section>
 
-        <section class="app__collection" id="appCollection">
+        <section class="app__collection">
             <div class="container">
                 <div class="row collection__ui pb-5">
                     <div class="col d-flex justify-content-center">
-                        <h2 class="section__header"><a class="section__title" href="#appCollection">COLLECTIONS</a></h2>
+                        <h2 class="section__header">COLLECTIONS</h2>
                     </div>
                 </div>
                 <div class="row">
