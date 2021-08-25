@@ -6,6 +6,12 @@
         function toggle() {
             const savedMode = localStorage.getItem("data-theme");
             if (savedMode) {
+                if (savedMode === "dark") {
+                    toggler.innerHTML = `<i class="fas fa-sun"></i>`;
+                    istoggle = true;
+                } else if (savedMode === "dark") {
+                    toggler.innerHTML = `<i class="fas fa-moon"></i>`;
+                }
                 document.body.setAttribute("data-theme", savedMode);
             }
         } toggle();
@@ -13,15 +19,13 @@
         function cngMode() {
             if (istoggle === false) {
                 localStorage.setItem("data-theme", "dark");
-                toggler.innerHTML = `<i class="fas fa-sun"></i>`;
                 istoggle = true;
             } else {
                 localStorage.setItem("data-theme", "light");
-                toggler.innerHTML = `<i class="fas fa-moon"></i>`;
                 istoggle = false;
             }
             toggle();
-        } cngMode();
+        }
 
         toggler.addEventListener("click", cngMode);
     } themeToggler();
