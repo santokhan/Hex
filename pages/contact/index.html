@@ -16,66 +16,91 @@
     <title>HEX</title>
 </head>
 
-<body>
+<body data-theme="light">
     <header class="app__header">
         <nav class="app__navbar">
-            <div class="container-fluid p-0">
-                <div class="row align-items-center p-0">
-                    <div class="col-5 order-xl-1 order-2">
-                        <div class="app__nav">
-                            <a class="app__nav__link" href="#">Home</a>
-                            <a class="app__nav__link" href="#">Product <i class="fa fa-caret-down"></i></a>
-                            <a class="app__nav__link" href="#">Services</a>
-                            <a class="app__nav__link" href="#">Contact</a>
-                        </div>
-                    </div>
-                    <div class="col-2 order-xl-2 order-1 d-flex justify-content-center"><object height="40" data="img/hex-logo.svg" type="text/svg"></object></div>
-                    <div class="col-5 order-xl-3 order-3 d-flex justify-content-end">
-                        <div class="social__icon">
-                            <a class="social__link" href="https://www.facebook.com/hexuidesign"><i class="fab fa-facebook"></i></a>
-                            <a class="social__link" href="https://www.instagram.com/hexuidesign"><i class="fab fa-instagram"></i></a>
-                            <a class="social__link" href="https://www.twitter.com/santokhan1999"><i class="fab fa-twitter"></i></a>
-                            <a class="social__link" href="https://www.linkedin.com/in/santokhan1999"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
+            <div class="nav__container">
+                <button class="navbar__toggler" id="navToggler" data-target="appNav"><img width="24" src="img/toggler.svg" alt="toggler"></button>
+                <div class="app__nav" id="appNav">
+                    <a class="app__nav__link" href="#"><span class="hover"></span>Home</a>
+                    <a class="app__nav__link" href="#"><span class="hover"></span>Product <i class="fa fa-caret-down"></i></a>
+                    <a class="app__nav__link" href="#"><span class="hover"></span>Services</a>
+                    <a class="app__nav__link" href="#"><span class="hover"></span>Contact</a>
+
+                    <div class="social__icon">
+                        <a class="social__link" href="https://www.facebook.com/hexuidesign"><i class="fab fa-facebook"></i></a>
+                        <a class="social__link" href="https://www.instagram.com/hexuidesign"><i class="fab fa-instagram"></i></a>
+                        <a class="social__link" href="https://www.twitter.com/santokhan1999"><i class="fab fa-twitter"></i></a>
+                        <a class="social__link" href="https://www.linkedin.com/in/santokhan1999"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
             </div>
+            <div class="logo"><object height="40" data="img/hex-logo.svg" type="text/svg+xml"></object></div>
+            <!-- <div class="social__icon">
+                <a class="social__link" href="https://www.facebook.com/hexuidesign"><i class="fab fa-facebook"></i></a>
+                <a class="social__link" href="https://www.instagram.com/hexuidesign"><i class="fab fa-instagram"></i></a>
+                <a class="social__link" href="https://www.twitter.com/santokhan1999"><i class="fab fa-twitter"></i></a>
+                <a class="social__link" href="https://www.linkedin.com/in/santokhan1999"><i class="fab fa-linkedin-in"></i></a>
+            </div> -->
+            <div class="theme__toggler" id="themeToggler"><i class="fas fa-moon"></i></div>
         </nav>
+        <script>
+
+        </script>
     </header>
 
     <main class="app__main">
         <section class="app__banner">
             <div class="container-fluid">
                 <div class="container">
-                    <div class="row">
+                    <div class="row py-xl-5">
                         <div class="col-12 d-flex justify-content-center">
                             <div class="d-flex flex-column align-items-center">
                                 <h2 class="banner__txt">HEX</h2>
-                                <p>UI BUILDER</p>
+                                <p>User Interface Builder</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <div class="section__home">
+                <div class="item"><img src="img/ui-trimmer-shop.png" alt="trimmer" width="80%"></div>
+                <div class="item"><img src="img/ui-real-state.png" alt="trimmer" width="80%"></div>
+                <div class="item"><img src="img/ui-art.png" alt="trimmer" width="80%"></div>
+                <div class="item"><img src="img/ui-headphone.png" alt="trimmer" width="80%"></div>
+                <div class="item"><img src="img/ui-game.png" alt="trimmer" width="80%"></div>
+                <div class="item"><img src="img/ui-fashion.png" alt="trimmer" width="80%"></div>
+            </div>
+            <div class="section__home__2">
+                <div class="item"></div>
+                <div class="item"><img src="img/ui-interior.png" alt="trimmer" width="80%"></div>
+                <div class="item"><img src="img/ui-orix-cooling-fan.png" alt="trimmer" width="80%"></div>
+                <div class="item"><img src="img/ui-game.png" alt="trimmer" width="80%"></div>
+                <div class="item"></div>
+                <div class="item"><img src="img/ui-portfolio.png" alt="trimmer" width="80%"></div>
+            </div>
         </section>
 
-        <section class="app__collection">
+        <section class="app__collection mt-5" id="appCollection">
             <div class="container">
-                <div class="row collection__ui pb-5">
+                <div class="row collection__ui pb-5 d-xl-flex d-none">
                     <div class="col d-flex justify-content-center">
-                        <h2 class="section__header">COLLECTIONS</h2>
+                        <h2 class="section__header"><a class="section__title" href="#appCollection">COLLECTIONS</a></h2>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-8">
-                        <a href="#" target="_blank" rel="noopener noreferrer"><img class="collection__ui__img" src="img/ui-trimmer-shop.png" alt="ui-img"></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            <img class="collection__ui__img" src="img/ui-trimmer-shop.png" alt="ui-img"></a>
                     </div>
                     <div class="col-4"></div>
                 </div>
                 <div class="row collection__ui">
                     <div class="col-4"></div>
                     <div class="col-8">
-                        <a href="#" target="_blank" rel="noopener noreferrer"><img class="collection__ui__img" src="img/ui-real-state.png" alt="ui-img"></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            <img class="collection__ui__img" src="img/ui-real-state.png" alt="ui-img"></a>
                     </div>
                 </div>
                 <div class="row collection__ui">
@@ -84,46 +109,138 @@
                     </div>
                     <div class="col-4"></div>
                 </div>
-                <div class="row collection__ui">
-                    <div class="col-4"></div>
-                    <div class="col-8">
-                        <a href="websites/hex-game/index.html" target="_blank" rel="noopener noreferrer"><img class="collection__ui__img" src="img/ui-game.png" alt="ui-img"></a>
+            </div>
+        </section>
+
+        <section class="ui__design" id="uiDesign">
+            <div class="container mt-5">
+                <div class="row pt-5">
+                    <div class="col-12 d-flex justify-content-center">
+                        <h2 class="section__header"><a class="section__title" href="#uiDesign">UI DESIGNS</a></h2>
                     </div>
                 </div>
-                <div class="row collection__ui">
-                    <div class="col-8">
-                        <a href="#" target="_blank" rel="noopener noreferrer"><img class="collection__ui__img" src="img/ui-art.png" alt="ui-img"></a>
-                    </div>
-                    <div class="col-4"></div>
-                </div>
-                <div class="row collection__ui">
-                    <div class="col-4"></div>
-                    <div class="col-8">
-                        <a href="#" target="_blank" rel="noopener noreferrer"><img class="collection__ui__img" src="img/ui-orix-cooling-fan.png" alt="ui-img"></a>
-                    </div>
-                </div>
-                <div class="row collection__ui">
-                    <div class="col-8">
-                        <a href="#" rel="noopener noreferrer"><img class="collection__ui__img" src="img/ui-headphone.png" alt="ui-img"></a>
-                    </div>
-                    <div class="col-4"></div>
-                </div>
-                <div class="row collection__ui">
-                    <div class="col-4"></div>
-                    <div class="col-8">
-                        <a href="#" target="_blank" rel="noopener noreferrer"><img class="collection__ui__img" src="img/ui-fashion.png" alt="ui-img"></a>
+            </div>
+
+            <div class="app__grid">
+                <div class="grid__item">
+                    <a class="grid__link" href="#" target="_blank">
+                        <div class="grid__top">
+                            <img class="grid__img" src="img/ui-trimmer-shop.png" alt="grid-img-1">
+                            <div class="effect"><i class="fa fa-link" aria-hidden="true"></i></div>
+                        </div>
+                    </a>
+                    <div class="grid__des">
+                        <h4 class="grid__title">Race Store UI/UX By HEX</h4>
                     </div>
                 </div>
-                <div class="row collection__ui">
-                    <div class="col-8">
-                        <a href="#" target="_blank" rel="noopener noreferrer"><img class="collection__ui__img" src="img/ui-real-state-art.png" alt="ui-img"></a>
+                <div class="grid__item">
+                    <a class="grid__link" href="#" target="_blank">
+                        <div class="grid__top">
+                            <img class="grid__img" src="img/ui-real-state.png" alt="grid-img-1">
+                            <div class="effect"><i class="fa fa-link" aria-hidden="true"></i></div>
+                        </div>
+                    </a>
+                    <div class="grid__des">
+                        <h4 class="grid__title">Race Store UI/UX By HEX</h4>
                     </div>
-                    <div class="col-4"></div>
                 </div>
-                <div class="row collection__ui">
-                    <div class="col-4"></div>
-                    <div class="col-8">
-                        <a href="#" target="_blank" rel="noopener noreferrer"><img class="collection__ui__img" src="img/ui-portfolio.png" alt="ui-img"></a>
+                <div class="grid__item">
+                    <a class="grid__link" href="#" target="_blank">
+                        <div class="grid__top">
+                            <img class="grid__img" src="img/ui-interior.png" alt="grid-img-1">
+                            <div class="effect"><i class="fa fa-link" aria-hidden="true"></i></div>
+                        </div>
+                    </a>
+                    <div class="grid__des">
+                        <h4 class="grid__title">Interior UI/UX By HEX</h4>
+                    </div>
+                </div>
+                <div class="grid__item">
+                    <a class="grid__link" href="#" target="_blank">
+                        <div class="grid__top">
+                            <img class="grid__img" src="img/ui-art.png" alt="grid-img-1">
+                            <div class="effect"><i class="fa fa-link" aria-hidden="true"></i></div>
+                        </div>
+                    </a>
+                    <div class="grid__des">
+                        <h4 class="grid__title">Theme Builder UI/UX By HEX</h4>
+                    </div>
+                </div>
+                <div class="grid__item">
+                    <a class="grid__link" href="websites/hex-game/index.html" target="_blank">
+                        <div class="grid__top">
+                            <img class="grid__img" src="img/ui-game.png" alt="grid-img-1">
+                            <div class="effect"><i class="fa fa-link" aria-hidden="true"></i></div>
+                        </div>
+                    </a>
+                    <div class="grid__des">
+                        <h4 class="grid__title">Games UI/UX By HEX</h4>
+                    </div>
+                </div>
+                <div class="grid__item">
+                    <a class="grid__link" href="#" target="_blank">
+                        <div class="grid__top">
+                            <img class="grid__img" src="img/ui-orix-cooling-fan.png" alt="grid-img-1">
+                            <div class="effect"><i class="fa fa-link" aria-hidden="true"></i></div>
+                        </div>
+                    </a>
+                    <div class="grid__des">
+                        <h4 class="grid__title">By HEX</h4>
+                    </div>
+                </div>
+                <div class="grid__item">
+                    <a class="grid__link" href="#" target="_blank">
+                        <div class="grid__top">
+                            <img class="grid__img" src="img/ui-headphone.png" alt="grid-img-1">
+                            <div class="effect"><i class="fa fa-link" aria-hidden="true"></i></div>
+                        </div>
+                    </a>
+                    <div class="grid__des">
+                        <h4 class="grid__title">By HEX</h4>
+                    </div>
+                </div>
+                <div class="grid__item">
+                    <a class="grid__link" href="#" target="_blank">
+                        <div class="grid__top">
+                            <img class="grid__img" src="img/ui-fashion.png" alt="grid-img-1">
+                            <div class="effect"><i class="fa fa-link" aria-hidden="true"></i></div>
+                        </div>
+                    </a>
+                    <div class="grid__des">
+                        <h4 class="grid__title">By HEX</h4>
+                    </div>
+                </div>
+                <div class="grid__item">
+                    <a class="grid__link" href="#" target="_blank">
+                        <div class="grid__top">
+                            <img class="grid__img" src="img/ui-real-state-art.png" alt="grid-img-1">
+                            <div class="effect"><i class="fa fa-link" aria-hidden="true"></i></div>
+                        </div>
+                    </a>
+                    <div class="grid__des">
+                        <h4 class="grid__title">By HEX</h4>
+                    </div>
+                </div>
+                <div class="grid__item">
+                    <a class="grid__link" href="#" target="_blank">
+                        <div class="grid__top">
+                            <img class="grid__img" src="img/ui-portfolio.png" alt="grid-img-1">
+                            <div class="effect"><i class="fa fa-link" aria-hidden="true"></i></div>
+                        </div>
+                    </a>
+                    <div class="grid__des">
+                        <h4 class="grid__title">By HEX</h4>
+                    </div>
+                </div>
+                <div class="grid__item">
+                    <a class="grid__link" href="websites/tport/index.html" target="_blank">
+                        <div class="grid__top">
+                            <img class="grid__img" src="img/transportation.png" alt="grid-img-1">
+                            <div class="effect"><i class="fa fa-link" aria-hidden="true"></i></div>
+                        </div>
+                    </a>
+                    <div class="grid__des">
+                        <h4 class="grid__title">By HEX</h4>
                     </div>
                 </div>
             </div>
@@ -138,8 +255,7 @@
             <div class="row py-xl-5 pb-5">
                 <div class="col-xl-4 col-12">
                     <h4 class="pb-xl-2 pt-3">About</h4>
-                    <p>A beautiful shop of high
-                        quality trimmer. Shape your beared very quickly.</p>
+                    <p>A beautiful shop of high quality trimmer. Shape your beared very quickly.</p>
                     <div class="social__icon">
                         <a class="social__link" href="#"><i class="fab fa-facebook"></i></a>
                         <a class="social__link" href="#"><i class="fab fa-instagram"></i></a>
@@ -150,19 +266,19 @@
                 <div class="col-xl-2 col-6">
                     <h4 class="pb-xl-2 pt-3">Pages</h4>
                     <div class="footer__nav">
-                        <div><a class="footer__link" href="#">FAQ</a></div>
-                        <div><a class="footer__link" href="#">Support</a></div>
-                        <div><a class="footer__link" href="#">About</a></div>
-                        <div><a class="footer__link" href="#">Contact</a></div>
+                        <div class="my-2"><a class="footer__link" href="#">FAQ</a></div>
+                        <div class="my-2"><a class="footer__link" href="#">Support</a></div>
+                        <div class="my-2"><a class="footer__link" href="#">About</a></div>
+                        <div class="my-2"><a class="footer__link" href="#">Contact</a></div>
                     </div>
                 </div>
                 <div class="col-xl-2 col-6">
                     <h4 class="pb-xl-2 pt-3">Pages</h4>
                     <div class="footer__nav">
-                        <div><a class="footer__link" href="#">Feedback</a></div>
-                        <div><a class="footer__link" href="#">Bug</a></div>
-                        <div><a class="footer__link" href="#">Compare</a></div>
-                        <div><a class="footer__link" href="#">Privacy</a></div>
+                        <div class="my-2"><a class="footer__link" href="#">Feedback</a></div>
+                        <div class="my-2"><a class="footer__link" href="#">Bug</a></div>
+                        <div class="my-2"><a class="footer__link" href="#">Compare</a></div>
+                        <div class="my-2"><a class="footer__link" href="#">Privacy</a></div>
                     </div>
                 </div>
                 <div class="col-xl-4">
@@ -188,7 +304,7 @@
 
     <button class="scroll__top" id="scrollTopBtn"><i class="fa fa-caret-up"></i></button>
     <a class="founder" href="https://santokhan.github.io" target="_blank">
-        <img src="https://lh3.googleusercontent.com/wUtwY60MdPnN4Uvs-YF6qzy5OF3TXUbrocFPos8KzJQceUeu_4fYlGIL70esU0RU3mEukEf68CrnOOKGY_t35pqcKXvq7htyyOOq5_8EDArol8dy5ETOEKqiLNY1mhaFmP3NP6gbQCH30ZqjVDoqfb3VeTxe_bnK7BJ27EPwckdFKtUXDjrwZD1iBbT_2I0ax1HXQn-Kjl1oA24RWuHgQKrbexNb1Htl5QMtfQ_hv1Qj5MbU21W8N3GXTDKOa-P64G6o05bpeaxO1eRd_xPq5jX9umy3NbcWpH6kZh1WACVbLYmqzQEHRHhjg6poFFaWizR7FwzDxodt6TUZJ_uZIc5wsJBzTfwmpVpZyeyKW049s5KcWkYh0ffJrNJhYqwPVkHK7iZBgkNGOyVHVPqHHpoMjK3GljmjDjh_f7m0rrD0XNRQYeBcaVuYTitowvloxzdwqzSkUfZELbzxudHQGdmiHs3WIX5WJFQXGPE3I_ltLJi1Cy89Tj02yhaZG5k-wFcOXDUCaFK7GGO-4xq8kLNAo7LM2aG6-X1fv_Hx-AYY7MkwEJ5XujvLCXdI_9GfDdVgKPhN3hIKd_zBkNlhwHKYmfVlmf3m4ZxDZezOh-S37sCJbwKGOjXqNz6gNpF57HbIW8ofRK7sYGmZx9ZWxeEwrh8A8NZTN5km-xenaJqgs4uxCnlWyUoy-W1KAO_SMPAV6RfG1pW6y_puZr3EZNdO=s827-no?authuser=0"
+        <img src="https://previews.dropbox.com/p/thumb/ABSsN9qHetbBCkL5r-xwB0QkpYAEybfdyCLNy2RuvosIkQhidWpRyyOYMHKDGYez3VqqsgXQjlyNTfLdNxRyAYhhT6g3Y1Q0mfFLR8VMu_c4ANAp_YKzmK0d_C-yvDvwAJakZolhr_G5fnRwE6TA7-3LkM4MBbC1RRa2jYPEwcZ5OW8RK4YqnAVygbT1bGnO8QfoGhRYem0mT1Etr1k6DqNbMj0PcW8ukox9bqO-AY5WqtpNk3ruyrGZCNzs2pw7IM1Rjr0kypNnB0Uoyw3jd6jkoc-yf8i8OJxolAVQPzvgbfi4ZxXW3PIjMr5L2Q_Vs-31sPxthd8fseGyzKk2a4uI1OnS3_-S15Py85NKWIV9Cw/p.png?fv_content=true&size_mode=5"
             height="100%" alt="santo-img"><span class="txt">Ceo</span>
     </a>
 
