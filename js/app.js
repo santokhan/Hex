@@ -79,10 +79,11 @@
 
 
 {/**Creating grid new item */
-    function createGrid(src = "img/fashion-ui.png", link = "#", title = "Not pass any name") {
-        let srcClone = src;
-        let titleClone = title;
-        let linkClone = link;
+    // function createGrid(src = "img/fashion-ui.png", link = "#", title = "Not pass any name") {
+    function createGrid(obj) {
+        let linkClone = obj.href;
+        let srcClone = obj.src;
+        let titleClone = obj.name;
 
         //grid item
         const gridBox = document.querySelector("#app__grid");
@@ -96,7 +97,7 @@
             let des = createDes(titleClone);
             div.appendChild(link);
             div.appendChild(des);
-            console.log(div.outerHTML);
+            //console.log(div.outerHTML);
             return div;
 
             //grid link
@@ -164,8 +165,34 @@
                 }
             }
         } createItem();
-    } createGrid("img/fashion-ui.png", "./websites/fashion-ui/index.html", "Fashion UI");
-    createGrid("img/painter.png", "./websites/colors/index.html", "Painter");
+    }
+    //createGrid(gridItemsData(0));
+    for (let i = 1; i < 13; i++) {
+        createGrid(gridItemsData(i));
+    };
+}
+
+function gridItemsData(props) {
+    /**Here props is array index */
+    const data = [
+        { name: "Ecommerce Store", href: "#", src: "https://live.staticflickr.com/65535/51439618692_e467012815_c.jpg", },
+        { name: "Race Store", href: "#", src: "https://live.staticflickr.com/65535/51440617983_3238a859e6_c.jpg", },
+        { name: "Interior", href: "#", src: "https://live.staticflickr.com/65535/51441112794_65cfe57c44_c.jpg", },
+        { name: "Theme Builder", href: "#", src: "https://live.staticflickr.com/65535/51440618558_37c5c3f71b_c.jpg", },
+        { name: "Games", href: "#", src: "https://live.staticflickr.com/65535/51439617527_27d664d8b1_c.jpg", },
+        { name: "Cooling Fan", href: "#", src: "https://live.staticflickr.com/65535/51440367181_7de24ecc57_c.jpg", },
+        { name: "Headphone", href: "#", src: "https://live.staticflickr.com/65535/51439617447_1334ded85b_c.jpg", },
+        { name: "Fashion", href: "#", src: "https://live.staticflickr.com/65535/51439617567_9319681738_c.jpg", },
+        { name: "Real State", href: "#", src: "https://live.staticflickr.com/65535/51440617833_62372d9e1a_c.jpg", },
+        { name: "Portfolio", href: "#", src: "https://live.staticflickr.com/65535/51439617162_71c73ff00e_c.jpg", },
+        { name: "Transport Agency", href: "./websites/tport/index.html", src: "https://live.staticflickr.com/65535/51440618648_2bdc3dacc3_c.jpg", },
+        { name: "Fashion", href: "./websites/fashion-ui/index.html", src: "https://live.staticflickr.com/65535/51441114009_b68ba1515a_c.jpg", },
+        { name: "Painter", href: "./websites/colors/index.html", src: "https://live.staticflickr.com/65535/51441330750_ccee079c3c_c.jpg", },
+        // { name: "", href: "#", src: "", },
+    ];
+    if (typeof (props) === "number") {
+        return data[props];
+    }
 }
 
 
