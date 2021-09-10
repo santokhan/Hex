@@ -9,7 +9,7 @@
                 if (savedMode === "dark") {
                     toggler.innerHTML = `<i class="fas fa-sun"></i>`;
                     istoggle = true;
-                } else if (savedMode === "dark") {
+                } else if (savedMode === "light") {
                     toggler.innerHTML = `<i class="fas fa-moon"></i>`;
                 }
                 document.body.setAttribute("data-theme", savedMode);
@@ -167,7 +167,7 @@
         } createItem();
     }
     //createGrid(gridItemsData(0));
-    for (let i = 1; i < 13; i++) {
+    for (let i = 0; i < 13; i++) {
         createGrid(gridItemsData(i));
     };
 }
