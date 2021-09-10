@@ -230,7 +230,7 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   column-gap: 3rem;
-  row-gap: 3rem;
+  row-gap: 4rem;
   color: var(--brand-dark);
 }
 .app__grid .grid__item {
