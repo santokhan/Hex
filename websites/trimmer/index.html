@@ -20,7 +20,7 @@
         <button type="button" id="toggler" class="toggler d-xl-none d-block" data-target="appNav"><i class="fa fa-bars" aria-hidden="true"></i></button>
 
         <div class="app__nav" id="appNav">
-          <div class="d-flex flex-xl-row flex-column align-items-start">
+          <div class="d-flex flex-xl-row flex-column align-items-start bg-white p-xl-0 p-3">
             <a class="link" href="#"><span class="hover"></span>Home</a>
             <a class="link" href="#"><span class="hover"></span>Product <i class="fa fa-caret-down"></i></a>
           </div>
@@ -53,7 +53,7 @@
     </nav>
 
     <div class="branding">
-      <div class="search__box">
+      <div class="search__box d-none d-xl-block">
         <form id="searchForm">
           <input class="input__search" id="search" type="search" size="33" placeholder="Search">
           <button type="submit" class="submit"><i class="fa fa-search"></i></button>
@@ -92,32 +92,30 @@
 
   <main class="app__main">
     <div class="shop">
-      <div class="menu__container">
+      <div class="menu__container d-none d-xl-block">
         <div class="menu">
           <div>
-            <div class="menu__label"><span>Price</span>
-              <i class="fa fa-caret-down"></i>
-            </div>
-            <div class="m-3">
-              <span>Minimun</span>
-            </div>
-            <div class="m-3">
-              <span>Minimun</span>
+            <div class="menu__label" data-target="priceRange"><span>Price</span><i class="fa fa-caret-down"></i></div>
+            <div id="priceRange">
+              <div class="m-3"><span>Minimun</span></div>
+              <div class="m-3"><span>Maximum</span></div>
             </div>
           </div>
+
           <div>
-            <div class="menu__label"><span>Brand</span><i class="fa fa-caret-down"></i></div>
-            <div class="d-flex justify-content-between align-items-center m-3"><span>Philips</span><i class="fa fa-angle-right"></i></div>
-            <div class="d-flex justify-content-between align-items-center m-3"><span>Xiaomi</span><i class="fa fa-angle-right"></i></div>
-            <div class="d-flex justify-content-between align-items-center m-3"><span>Apple</span><i class="fa fa-angle-right"></i></div>
-            <div class="d-flex justify-content-between align-items-center m-3"><span>Orix</span><i class="fa fa-angle-right"></i></div>
-            <div class="d-flex justify-content-between align-items-center m-3"><span>Kemei</span><i class="fa fa-angle-right"></i></div>
-          </div>
-          <div>
-            <div class="menu__label"><span>Colors</span>
-              <i class="fa fa-caret-down"></i>
+            <div class="menu__label" data-target="brandName"><span>Brand</span><i class="fa fa-caret-down"></i></div>
+            <div class="brand__name" id="brandName">
+              <div class="item"><span>Philips</span><i class="fa fa-angle-right"></i></div>
+              <div class="item"><span>Xiaomi</span><i class="fa fa-angle-right"></i></div>
+              <div class="item"><span>Apple</span><i class="fa fa-angle-right"></i></div>
+              <div class="item"><span>Orix</span><i class="fa fa-angle-right"></i></div>
+              <div class="item"><span>Kemei</span><i class="fa fa-angle-right"></i></div>
             </div>
-            <div>
+          </div>
+
+          <div>
+            <div class="menu__label" data-target="selectColor"><span>Colors</span><i class="fa fa-caret-down"></i></div>
+            <div id="selectColor">
               <div class="py-5 my-5"></div>
             </div>
           </div>
@@ -127,15 +125,18 @@
 
       <div class="product__grid" id="product">
         <div class="card" id="cardA">
-          <div class="img__box"><img src="img/wahl-3.png" alt="wahl-3"></div>
+          <div class="img__box">
+            <img
+              src="https://lh3.googleusercontent.com/aTjJQ7VuljQS2syFS3a8EJw32SkuyUKa4wMwTDPWDVp6eqa9zjCzpKcqsxPmYf3s81vab7eLXAMOZ6MvTY6JqR1SHwFYXrZjXRFlKToeKlNzGtq3UfF54RS8zTGS0NS8TDTwZmHhsP9cFO8LIq1rRmZOr6X_l0QfhVwlqPczm0yTjQKNipMM0-LRqDDCbb0FhsoaIU4xRuzmr-SYzsSBO9utTMqqnrKnTfGye_yVP0CGZ9B4_Oe8MQFR4YjSEE4K2-GEMjeBkTFe-Y40AgnyQWM-Qwt_wyL16R08KVhRw--JD-Jzu01K-7pz52ES-E9Lfwwanb2creeTqMwOEA_y8qq6LSoqVTvh4MRxUc__R32yV3XXCRgQmTV9G6NjYfm8EovO8FLtbZLXLNP95E5QqtKM0wp7rcmy8Atqn1wOyJoOrQSpJd0qLY4oDjw03VCQKWL9v-TvLnL70hw85JgPVtygTyaZyNwXKGZLeVldx2sPDEk7U7QE2b1d2GNVqxsmHtLcYauF4cr0DwqIFgnAG4YY5YKmQQjPxoVZYnLH3MZuCSZHuLi7-xgnaaxs5NayoREPgI4GBASWZcPErBD_N-VsTHRIN41zgO0GHKzOa-s-WOk-DC9hgmuqZeCCJxzQslLpXMpGi41m0bUu0trrnOikIimCG9ujsT08ItLKg79c2Xs0shZttOe2hFEBHstYP_84GSqRgzwS2WAS3-Twlu8=s268-no?authuser=3"
+              alt="wahl-3">
+          </div>
           <div class="details">
-            <div class="d-flex justify-content-between p-2">
-              <div>WAHL</div>
+            <div class="tile">
+              <div class="name">WAHL</div>
               <div><i class="fa fa-heartbeat" aria-hidden="true"></i></div>
             </div>
-            <div class="d-flex justify-content-between p-2">
+            <div class="tile">
               <div>
-                <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -150,7 +151,9 @@
     </div>
 
     <section class="trimming">
-      <div><img src="img/trimming.png" alt="window-interior" width="100%"></div>
+      <div><img
+          src="https://lh3.googleusercontent.com/EXmg5U3BMaj-qCv2eRQVWCAdnD2lbzNtgityDV5sqpSyZYyiS3Kv64u4ykcIeAnN392dyAYhlq5ATTF8TsPgDgw6D0_LAIFZJpXvYmFeSEN4S-DKHtEVv1NJrKhEsW-IGEcFCWivKmNRnCkvtOO2h6Ta5SDfWI6WaK6eaPdYfGHmMZR-pAT54NJwQt64tejah3Av1zNLOBWsyQoxyoxSQFiT5YBLCPHZrfiJzxavlCd9Nek-iBkmDl-1ip2jxsl2S1oLGuRHTIVLC02Z1ceFYM9v3A8fDkKD1bUMdV_tOSyfZmoJE0BBguLO-OkcsBPZl2dC0fEVyB-vhaXeQW8BzXdx_Rbxq9B-cZPZRY-31sQoNjizfTgs4vW1hU3CnNzInTi9TJC1z1mL83MT9fTnZCE-wlolU7s4ZzrpAxSeGoib1zyueByfzmTSVnIVx-uPeWti6Qr9pCRGw2Anj6ezptyzYNEYzNgHT2tzP9QOQ7kuq0p6VcrTbibRX5jeRjC9uk9CfzrzmGEJpzJA4W1vHFAfNzZ94izSEU3p-ugcL-iOIrb0DqWGMUIWQz3HcaJZ4gt3wvuhkivyAL7mUm_ZXt2rqJLexV19CT0SIjoN0pNiCLEFp0r6KKvV5ewmtzyxhbYNkSTT08er61UBxWVOxbTF6Yh_ExZi92wTbwxEMw-Ru_mLalW4qgJmYeHTab_cikgCqwur3heCM20_XJWFc6Y=w698-h344-no?authuser=3"
+          alt="man-trimming" width="100%"></div>
       <div class="popup" id="popup">
         <div class="inside">
           <h3>Quality Product</h3>
@@ -224,8 +227,9 @@
       <hr>
       <div class="row">
         <div class="col">
-          <div class="copyright d-flex justify-content-center mb-xl-5">
+          <div class="copyright d-flex flex-xl-row flex-column justify-content-between align-items-center mb-xl-5">
             <p>@2021 Copyright all right reserved.</p>
+            <div class="payment__method"><img width="100%" src="svg/payment-method.svg" alt="payment"></div>
           </div>
         </div>
       </div>
