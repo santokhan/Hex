@@ -19,7 +19,7 @@ ScrollReveal().reveal('.asus', slideUp);
 {
     function dropDown() {
         const toggler = document.getElementById("dropdownToggler");
-        const targetId = toggler.attributes["data-target"].value;
+        let targetId = toggler.attributes["data-target"].value;
         const target = document.getElementById(targetId);
 
         let isToggle = false;
@@ -40,6 +40,6 @@ ScrollReveal().reveal('.asus', slideUp);
             toggler.addEventListener("click", navShowHide);
         }
     }
-    dropDown();
+    //dropDown();
 }
 
