@@ -1,7 +1,9 @@
 :root {
+  --defalt-color: #202124;
   --default-bg: #edeae9;
   --default-border: 0.25px solid rgba(0, 0, 0, 0.3);
   --btn-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.3);
+  --white: #ffffff;
 }
 
 html {
@@ -24,7 +26,8 @@ body {
 .text__justify {
   text-align: justify;
 }
-/* _____________App Header_____________ */
+
+/* _____________________App Header_____________________ */
 .app__header {
   position: relative;
 }
@@ -35,7 +38,7 @@ body {
   grid-template-rows: 1fr;
   align-items: center;
   padding: 0 1rem;
-  background: #ffffff;
+  background: var(--white);
 }
 .app__header .logo {
   grid-column: 2/3;
@@ -46,7 +49,7 @@ body {
   align-items: center;
 }
 
-/* _________________Navbar_________________ */
+/* _______________________Navbar_______________________ */
 .app__header .app__container {
   grid-column: 1/2;
 }
@@ -79,12 +82,13 @@ body {
 .app__nav .link:hover {
   border-bottom: 2px solid var(--brand-white);
 }
-/* _________________Logo_________________ */
+
+/* _________________________Logo_________________________ */
 .app__header .logo > img {
   height: 100%;
 }
 
-/* _________________User_________________ */
+/* _________________________User_________________________ */
 .user {
   grid-column: 3/4;
   display: flex;
@@ -94,12 +98,11 @@ body {
   border: 0.25px solid #555;
   padding: 0.25rem 0.5rem;
   border-radius: 1rem;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--white);
 }
 .cart__user > i {
   margin: 0 0.25rem;
 }
-
 .app__header .toggler {
   border: none;
   outline: none;
@@ -108,8 +111,17 @@ body {
   margin-left: 0.5rem;
   background-color: transparent;
 }
+.link:hover {
+  opacity: 0.8;
+}
+.cart__user .fa:hover {
+  opacity: 0.8;
+}
+.cart__user .fa:hover {
+  opacity: 0.8;
+}
 
-/* Branding */
+/* ________________________Branding________________________ */
 .branding {
   width: 100%;
   height: 80px;
@@ -136,14 +148,14 @@ body {
   outline: none;
   background-color: transparent;
 }
-.name {
+.branding .name {
   grid-column: 2/3;
   font-family: Poppins;
   font-style: normal;
   font-weight: 500;
   font-size: 28px;
   line-height: 42px;
-  color: #202124;
+  color: var(--defalt-color);
 }
 .sort {
   grid-column: 3/4;
@@ -161,9 +173,8 @@ body {
   opacity: 0.8;
 }
 
-/* ___________________________app main___________________________ */
+/* ________________________App Main________________________ */
 .app__main {
-  padding: 0;
   position: relative;
 }
 .shop {
@@ -173,6 +184,8 @@ body {
   column-gap: 1.5rem;
   padding: 0 1.5rem;
 }
+
+/* __________________________Menu__________________________ */
 .shop .menu__container {
   /*display will block in xl*/
   display: none;
@@ -182,7 +195,7 @@ body {
 }
 .shop .menu {
   padding: 0 1.5rem;
-  background-color: #ffffff;
+  background-color: var(--white);
 }
 .shop .menu__label {
   display: flex;
@@ -199,17 +212,17 @@ body {
   margin: 1rem;
 }
 
-/* ________________________Product Grid________________________ */
+/* _____________________Product Grid_____________________ */
 .shop .product__grid {
   display: grid;
+  /*column will be [ 1fr 1fr 1fr ] in xl & [ 1fr 1fr ] in sm*/
   grid-template-columns: 1fr;
   column-gap: 1.5rem;
   row-gap: 1.5rem;
 }
 .product__grid .card {
-  background-color: #ffffff;
+  background-color: var(--white);
   height: auto;
-  /* max-height: 500px; */
   border-radius: 0.5rem;
   padding: 1rem;
   display: flex;
@@ -233,9 +246,14 @@ body {
 }
 .details .tile .name {
   text-transform: uppercase;
+  font-size: 1.25rem;
+}
+.details .price {
+  font-size: 1.25rem;
+  color: var(--defalt-color);
 }
 
-/* ________________________Product list________________________ */
+/* _____________________Product List_____________________ */
 .product__list {
   width: 100%;
   display: grid;
@@ -244,7 +262,7 @@ body {
   row-gap: 1.5rem;
 }
 .product__list .card {
-  background-color: #ffffff;
+  background-color: var(--white);
   max-height: 180px;
   border-radius: 0.5rem;
   display: flex;
@@ -259,8 +277,11 @@ body {
 .product__list .details {
   width: 400px;
 }
+.fa-star {
+  color: #e6bb00;
+}
 
-/* Trimming */
+/* _______________________Trimming_______________________ */
 .trimming {
   position: relative;
   margin-top: 4rem;
@@ -273,7 +294,7 @@ body {
   width: 440px;
   height: 440px;
   background-color: transparent;
-  border: 4px solid #ffffff;
+  border: 4px solid var(--white);
   border-radius: 256px 256px 50px 256px;
   padding: 0.5rem;
 }
@@ -308,7 +329,7 @@ body {
   font-size: 1.25rem;
 }
 
-/* ______________________Footer______________________ */
+/* _______________________Footer_______________________ */
 .app__footer {
   padding-top: 2rem;
   background: var(--brand-gradient-reverse);
@@ -363,7 +384,6 @@ body {
   transform: scale(0.9);
   transition: transform 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-
 .payment__method {
   width: 180px;
   margin-bottom: 1rem;
@@ -379,7 +399,7 @@ body {
     font-size: var(--default-font);
   }
 
-  /* ________________________Product Grid________________________ */
+  /* ____________________Product Grid____________________ */
   .shop .product__grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -387,7 +407,7 @@ body {
     row-gap: 1.5rem;
   }
 
-  /* _____________________app footer_____________________ */
+  /* _____________________App Footer_____________________ */
   .app__footer {
     padding-top: 5rem;
     background: var(--brand-gradient-reverse);
@@ -396,7 +416,7 @@ body {
   .app__footer .footer__title {
     margin: 0 0 1rem 0;
   }
-  /* social */
+  /* Social */
   .app__footer .social .link {
     font-size: 1.25rem;
     margin: 0 0.5rem;
@@ -404,7 +424,7 @@ body {
 }
 
 @media (min-width: 768px) {
-  /* ________________________Product Grid________________________ */
+  /* ____________________Product Grid____________________ */
   .shop .product__grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -412,17 +432,19 @@ body {
     row-gap: 1rem;
   }
   .product__grid .card {
-    background-color: #ffffff;
+    background-color: var(--white);
     height: auto;
     border-radius: 0.5rem;
     padding: 1rem;
     display: flex;
     flex-direction: column;
+    text-decoration: none;
+    color: var(--defalt-color);
   }
 }
 
 @media (min-width: 1200px) {
-  /* _____________App Header_____________ */
+  /* _____________________App Header_____________________ */
   .app__header .app__navbar {
     height: 64px;
     padding: 0 1.5rem;
@@ -447,7 +469,7 @@ body {
     background: none;
   }
 
-  /* ___________________________app main___________________________ */
+  /* _____________________App Main_____________________ */
   .app__main {
     padding: 0;
     position: relative;
@@ -460,7 +482,7 @@ body {
     padding: 0 1.5rem;
   }
 
-  /* ________________________Product Grid________________________ */
+  /* ___________________Product Grid___________________ */
   .shop .product__grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -468,7 +490,7 @@ body {
     row-gap: 1.5rem;
   }
   .product__grid .card {
-    background-color: #ffffff;
+    background-color: var(--white);
     height: auto;
     border-radius: 0.5rem;
     padding: 1rem;
@@ -486,7 +508,7 @@ body {
     margin: 1rem 0 0 0;
   }
 
-  /* ________________________Product list________________________ */
+  /* ___________________Product list___________________ */
   .product__list {
     width: 100%;
     display: grid;
@@ -495,7 +517,7 @@ body {
     row-gap: 1.5rem;
   }
   .product__list .card {
-    background-color: #ffffff;
+    background-color: var(--white);
     max-height: 180px;
     border-radius: 0.5rem;
     display: flex;
@@ -511,7 +533,7 @@ body {
     width: 400px;
   }
 
-  /* _________________Trimming_________________ */
+  /* _____________________Trimming_____________________ */
   .trimming .popup {
     display: block;
     position: absolute;
@@ -520,12 +542,12 @@ body {
     width: 440px;
     height: 440px;
     background-color: transparent;
-    border: 4px solid #ffffff;
+    border: 4px solid var(--white);
     border-radius: 256px 256px 50px 256px;
     padding: 0.5rem;
   }
 
-  /* ___________________footer___________________ */
+  /* ______________________Footer______________________ */
   .payment__method {
     width: 280px;
   }
