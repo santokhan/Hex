@@ -175,7 +175,7 @@
 function gridItemsData(props) {
     /**Here props is array index */
     const data = [
-        { name: "Ecommerce Store", href: "#", src: "https://live.staticflickr.com/65535/51439618692_e467012815_c.jpg", },
+        { name: "Ecommerce Store", href: "./website/trimmer/index.html", src: "https://live.staticflickr.com/65535/51439618692_e467012815_c.jpg", },
         { name: "Race Store", href: "#", src: "https://live.staticflickr.com/65535/51440617983_3238a859e6_c.jpg", },
         { name: "Interior", href: "#", src: "https://live.staticflickr.com/65535/51441112794_65cfe57c44_c.jpg", },
         { name: "Theme Builder", href: "#", src: "https://live.staticflickr.com/65535/51440618558_37c5c3f71b_c.jpg", },
