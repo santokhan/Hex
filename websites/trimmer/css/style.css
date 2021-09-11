@@ -209,7 +209,7 @@ body {
 .product__grid .card {
   background-color: #ffffff;
   height: auto;
-  max-height: 400px;
+  /* max-height: 500px; */
   border-radius: 0.5rem;
   padding: 1rem;
   display: flex;
