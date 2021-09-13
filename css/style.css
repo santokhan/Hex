@@ -42,7 +42,7 @@ body {
 /* ___________________App Header in global___________________ */
 .app__header {
   height: 60px;
-  padding: 10px 1rem;
+  padding: 10px 0.5rem;
   font-size: var(--default-font-size);
   background-color: var(--brand-light);
   box-shadow: 0 0.25px rgb(161, 161, 161);
