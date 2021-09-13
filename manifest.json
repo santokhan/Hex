@@ -1,14 +1,49 @@
 {
-  "project-name": "HEX",
-  "title": "HEX",
-  "slogun": "USER INTERFACE DESIGNER",
-  "version": "1.1",
-  "category": "Custom HTML Template Design",
-  "language": "HTML,CSS,JavaScript",
-  "CEO": {
+  "name": "HEXUI",
+  "short_name": "HEX",
+  "url": "https://hexui.netlify.app",
+  "start_url": "https://hexui.netlify.app",
+  "display": "standalone",
+  "color": "#202124",
+  "background_color": "#fff",
+  "description": "Custom HTML Templates",
+  "developer": {
     "name": "Santo Khan",
-    "email": "santokhan1999@gmail.com",
-    "title": "Front-end Developer",
-    "website": "https://santokhan.github.io"
-  }
+    "url": "https://santokhan.github.io",
+    "language": ["HTML", "CSS", "JavaScrip"],
+    "hosting-provider": "Netlify"
+  },
+  "icons": [
+    {
+      "src": "img/touch/48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "img/touch/72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "img/touch/homescreen96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "img/touch/144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "img/touch/168.png",
+      "sizes": "168x168",
+      "type": "image/png"
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": ""
+    }
+  ]
 }
