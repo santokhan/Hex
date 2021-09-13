@@ -18,7 +18,8 @@
     {
       "src": "img/touch/48.png",
       "sizes": "48x48",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
       "src": "img/touch/72.png",
