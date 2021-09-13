@@ -6,7 +6,7 @@
   "display": "standalone",
   "color": "#202124",
   "background_color": "#ffffff",
-  "theme-color": "#ffffff",
+  "theme_color": "#ffffff",
   "description": "Custom HTML Templates",
   "developer": {
     "name": "Santo Khan",
@@ -38,6 +38,11 @@
     {
       "src": "img/touch/168.png",
       "sizes": "168x168",
+      "type": "image/png"
+    },
+    {
+      "src": "img/touch/512.png",
+      "sizes": "512x512",
       "type": "image/png"
     }
   ],
