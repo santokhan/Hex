@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="../../css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../../css/fontawesome/css/all.min.css">
+
+  <link rel="icon" href="../../svg/favicon.svg">
+  <title>Trimmer</title>
+</head>
+
+<body>
+  <header class="app__header">
+    <nav class="app__navbar">
+      <div class="nav__container">
+        <button type="button" id="toggler" class="toggler d-xl-none d-block" data-target="appNav"><i class="fa fa-bars" aria-hidden="true"></i></button>
+
+        <div class="app__nav" id="appNav">
+          <div class="d-flex flex-xl-row flex-column align-items-start bg-white p-xl-0 p-3">
+            <a class="link" href="#"><span class="hover"></span>Home</a>
+            <a class="link" href="#"><span class="hover"></span>Product <i class="fa fa-caret-down"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="logo">
+        <svg width="40" height="36" viewBox="0 0 40 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="11.2445" height="2.18075" rx="1.09037" transform="matrix(1 0 0 -1 0 22.9309)" fill="#202124" />
+          <rect width="8.04151" height="2.18075" rx="1.09037" transform="matrix(1 0 0 -1 2.65796 30.4272)" fill="#202124" />
+          <rect width="6.74669" height="2.18075" rx="1.09037" transform="matrix(1 0 0 -1 5.1792 15.5027)" fill="#202124" />
+          <rect width="2.18075" height="2.18075" rx="1.09037" transform="matrix(1 0 0 -1 1.56763 15.5027)" fill="#202124" />
+          <path
+            d="M39.9834 29.0788L38.4254 9.4446C38.3287 8.17956 37.2584 7.18903 35.9899 7.18903H32.9121V11.7493C32.9121 12.3141 32.4549 12.7712 31.8902 12.7712C31.3261 12.7712 30.8683 12.3141 30.8683 11.7493V7.18903H21.4672V11.7493C21.4672 12.3141 21.0093 12.7712 20.4453 12.7712C19.8805 12.7712 19.4234 12.3141 19.4234 11.7493V7.18903H16.3455C15.0771 7.18903 14.0068 8.17956 13.9101 9.44188L12.3514 29.0815C12.2309 30.6545 12.7765 32.22 13.8481 33.3768C14.9197 34.5334 16.4389 35.1977 18.016 35.1977H34.3195C35.8966 35.1977 37.4158 34.5334 38.4874 33.3767C39.559 32.2199 40.1047 30.6544 39.9834 29.0788ZM30.7716 19.0801L25.4865 24.3652C25.2869 24.5648 25.0253 24.6649 24.7637 24.6649C24.5021 24.6649 24.2405 24.5648 24.0409 24.3652L21.5639 21.8882C21.1647 21.489 21.1647 20.8425 21.5639 20.4433C21.9631 20.0441 22.6104 20.0441 23.0089 20.4433L24.7638 22.1975L29.3267 17.6345C29.7253 17.236 30.3725 17.236 30.7717 17.6345C31.1708 18.0338 31.1708 18.6809 30.7716 19.0801Z"
+            fill="#202124" />
+          <path d="M18.8772 7.18866H20.9216V11.7546C20.9216 12.3192 20.464 12.7768 19.8994 12.7768C19.3349 12.7768 18.8772 12.3192 18.8772 11.7546V7.18866Z" fill="white" />
+          <path d="M30.3262 7.18866H32.3706V11.7546C32.3706 12.3192 31.913 12.7768 31.3484 12.7768C30.7838 12.7768 30.3262 12.3192 30.3262 11.7546V7.18866Z" fill="white" />
+          <path
+            d="M26.1676 0.305664C22.4487 0.305664 19.4233 3.33173 19.4233 7.05065V7.18893H21.4671V7.05065C21.4671 4.45849 23.5756 2.34937 26.1677 2.34937C28.7599 2.34937 30.8683 4.45849 30.8683 7.05065V7.18893H32.912V7.05065C32.912 3.33173 29.8866 0.305664 26.1676 0.305664Z"
+            fill="#202124" />
+          <path d="M19.4224 7.18866H21.4668V11.7546C21.4668 12.3192 21.0091 12.7768 20.4446 12.7768C19.88 12.7768 19.4224 12.3192 19.4224 11.7546V7.18866Z" fill="#202124" />
+          <path d="M30.8716 7.18866H32.916V11.7546C32.916 12.3192 32.4584 12.7768 31.8938 12.7768C31.3292 12.7768 30.8716 12.3192 30.8716 11.7546V7.18866Z" fill="#202124" />
+        </svg>
+      </div>
+      <div class="user">
+        <div class="cart__user">
+          <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+          <i class="fa fa-user" aria-hidden="true"></i>
+        </div>
+      </div>
+    </nav>
+
+    <div class="branding">
+      <div class="search__box d-none d-xl-block">
+        <form id="searchForm">
+          <input class="input__search" id="search" type="search" size="33" placeholder="Search">
+          <button type="submit" class="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+      <div class="name">Race Shop</div>
+      <div class="sort">
+        <button class="sort__btn" id="listView">
+          <svg width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M5.30302 6.53409V9.375C5.30302 9.8457 4.92145 10.2273 4.45075 10.2273H0.852273C0.38157 10.2273 0 9.8457 0 9.375V6.53409C0 6.06339 0.38157 5.68182 0.852273 5.68182H4.45075C4.92145 5.68182 5.30302 6.06339 5.30302 6.53409ZM0 12.2159V15.0568C0 15.5275 0.38157 15.9091 0.852273 15.9091H4.45075C4.92145 15.9091 5.30302 15.5275 5.30302 15.0568V12.2159C5.30302 11.7452 4.92145 11.3636 4.45075 11.3636H0.852273C0.38157 11.3636 0 11.7452 0 12.2159ZM4.45075 0H0.852273C0.38157 0 0 0.38157 0 0.852273V3.69318C0 4.16389 0.38157 4.54545 0.852273 4.54545H4.45075C4.92145 4.54545 5.30302 4.16389 5.30302 3.69318V0.852273C5.30302 0.38157 4.92145 0 4.45075 0ZM7.29165 15.9091H17.3295C17.8002 15.9091 18.1818 15.5275 18.1818 15.0568V12.2159C18.1818 11.7452 17.8002 11.3636 17.3295 11.3636H7.29165C6.82095 11.3636 6.43938 11.7452 6.43938 12.2159V15.0568C6.43938 15.5275 6.82095 15.9091 7.29165 15.9091ZM6.43938 0.852273V3.69318C6.43938 4.16389 6.82095 4.54545 7.29165 4.54545H17.3295C17.8002 4.54545 18.1818 4.16389 18.1818 3.69318V0.852273C18.1818 0.38157 17.8002 0 17.3295 0H7.29165C6.82095 0 6.43938 0.38157 6.43938 0.852273ZM7.29165 10.2273H17.3295C17.8002 10.2273 18.1818 9.8457 18.1818 9.375V6.53409C18.1818 6.06339 17.8002 5.68182 17.3295 5.68182H7.29165C6.82095 5.68182 6.43938 6.06339 6.43938 6.53409V9.375C6.43938 9.8457 6.82095 10.2273 7.29165 10.2273Z"
+              fill="#202124" />
+          </svg>
+        </button>
+        <button class="sort__btn" id="gridView">
+          <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0)">
+              <path
+                d="M6.77255 0H2.27502C1.5219 0 0.90918 0.612719 0.90918 1.36584V5.86338C0.90918 6.6165 1.5219 7.22922 2.27502 7.22922H6.77255C7.52568 7.22922 8.1384 6.6165 8.1384 5.86338V1.36584C8.1384 0.612719 7.52568 0 6.77255 0Z"
+                fill="#202124" />
+              <path
+                d="M15.5436 0H11.046C10.2929 0 9.68018 0.612719 9.68018 1.36584V5.86338C9.68018 6.6165 10.2929 7.22922 11.046 7.22922H15.5436C16.2967 7.22922 16.9094 6.6165 16.9094 5.86338V1.36584C16.9094 0.612719 16.2967 0 15.5436 0Z"
+                fill="#202124" />
+              <path
+                d="M6.77255 8.77075H2.27502C1.5219 8.77075 0.90918 9.38347 0.90918 10.1366V14.6341C0.90918 15.3873 1.5219 16 2.27502 16H6.77255C7.52568 16 8.1384 15.3873 8.1384 14.6341V10.1366C8.1384 9.38347 7.52568 8.77075 6.77255 8.77075Z"
+                fill="#202124" />
+              <path
+                d="M15.5436 8.77075H11.046C10.2929 8.77075 9.68018 9.38347 9.68018 10.1366V14.6341C9.68018 15.3873 10.2929 16 11.046 16H15.5436C16.2967 16 16.9094 15.3873 16.9094 14.6341V10.1366C16.9094 9.38347 16.2967 8.77075 15.5436 8.77075Z"
+                fill="#202124" />
+            </g>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="app__main">
+    <style>
+      .app__home {
+        position: relative;
+        background: #555 url("https://lh3.googleusercontent.com/nz5sE5-amEGFic2SF3VP36-15uRzeV_bwIiRLX8KOre_JwD9l3-BOEZtWr2YloJkf7SAD7PwirY4L5W8BMX6pdDO_hysXZmLMi8Vm66PZo-qbwJaElv8o0tj1cDuw2WuKMAFf9fCN31Tvv7VXxXA3d8d7gdeagRQsCUAWK4B4CQ6BgG9Pj8HxYZCgzZovgBsFOIz8DWtsC9C4FnsXYiW1fkxCqvAlVtTdJB9fLFzpim8Ttxme75rKgFydfUwLyhpnOloTlAfk1cuu7X33zxJf8DMRRUEYU0zFVrYOwM2I2fp-vUqwd20XRKQXGtA0Jk5tN0lrTCbUa7KdaLeXe8ltWFWvJsTyvm8bYUGFRBGi5xCinbsrIMGALaBlCMuDTe23n5pDlePM3OdEchX3ig8LtXZi9Z2p6TcUWSnx9hYBXyzTnwxg-uwtXDG5mMeaZCtqSj1i2GT3KbTIjXJFrEK3Fg2_2sEVVyKzVrKarHC-04XfLWLlLFwQ-TORZn17AsJ5NrPA66FOTiVbnMe_P7zbejMSWsLvARXnfWGD5c6_eQMA2_X1SDMHEpFgbOYwPqmFC7bJfaiyHsQLLcn7uAnXPtbAp11rTeCnmRQwV_nTPIq9fipO_MwwSPCyals4jSVmzsJZ3sq3YUKmDjmKFYx6HbZk8FxLM1QugN7q3NC1cSPhRy0FKtzD6kYtNNkoL6yKh5pJLcPbNF-NAbVZ8q9inc=w1272-h795-no?authuser=3") no-repeat cover;
+        min-height: 100vh;
+      }
+    </style>
+    <div class="app__home">
+
+    </div>
+
+    <div class="shop">
+      <div class="menu__container d-none d-xl-block">
+        <div class="menu">
+          <div>
+            <div class="menu__label" data-target="priceRange"><span>Price</span><i class="fa fa-caret-down"></i></div>
+            <div id="priceRange">
+              <div class="d-fle m-3">
+                <span>Minimun</span>
+                <form>
+                  <input type="number" class="minimun" name="input_currency">
+                </form>
+              </div>
+              <div class="d-fle m-3"><span>Maximum</span>
+                <form>
+                  <input type="number" class="maximum" name="input_currency">
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="menu__label" data-target="brandName"><span>Brand</span><i class="fa fa-caret-down"></i></div>
+            <div class="brand__name" id="brandName">
+              <div class="item"><span>Philips</span><i class="fa fa-angle-right"></i></div>
+              <div class="item"><span>Xiaomi</span><i class="fa fa-angle-right"></i></div>
+              <div class="item"><span>Apple</span><i class="fa fa-angle-right"></i></div>
+              <div class="item"><span>Orix</span><i class="fa fa-angle-right"></i></div>
+              <div class="item"><span>Kemei</span><i class="fa fa-angle-right"></i></div>
+            </div>
+          </div>
+
+          <div>
+            <div class="menu__label" data-target="selectColor"><span>Colors</span><i class="fa fa-caret-down"></i></div>
+            <div id="selectColor">
+              <div class="py-5 my-5"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="product__grid" id="product">
+        <a href="#" class="card" id="cardA">
+          <div class="img__box">
+            <img
+              src="https://lh3.googleusercontent.com/aTjJQ7VuljQS2syFS3a8EJw32SkuyUKa4wMwTDPWDVp6eqa9zjCzpKcqsxPmYf3s81vab7eLXAMOZ6MvTY6JqR1SHwFYXrZjXRFlKToeKlNzGtq3UfF54RS8zTGS0NS8TDTwZmHhsP9cFO8LIq1rRmZOr6X_l0QfhVwlqPczm0yTjQKNipMM0-LRqDDCbb0FhsoaIU4xRuzmr-SYzsSBO9utTMqqnrKnTfGye_yVP0CGZ9B4_Oe8MQFR4YjSEE4K2-GEMjeBkTFe-Y40AgnyQWM-Qwt_wyL16R08KVhRw--JD-Jzu01K-7pz52ES-E9Lfwwanb2creeTqMwOEA_y8qq6LSoqVTvh4MRxUc__R32yV3XXCRgQmTV9G6NjYfm8EovO8FLtbZLXLNP95E5QqtKM0wp7rcmy8Atqn1wOyJoOrQSpJd0qLY4oDjw03VCQKWL9v-TvLnL70hw85JgPVtygTyaZyNwXKGZLeVldx2sPDEk7U7QE2b1d2GNVqxsmHtLcYauF4cr0DwqIFgnAG4YY5YKmQQjPxoVZYnLH3MZuCSZHuLi7-xgnaaxs5NayoREPgI4GBASWZcPErBD_N-VsTHRIN41zgO0GHKzOa-s-WOk-DC9hgmuqZeCCJxzQslLpXMpGi41m0bUu0trrnOikIimCG9ujsT08ItLKg79c2Xs0shZttOe2hFEBHstYP_84GSqRgzwS2WAS3-Twlu8=s268-no?authuser=3"
+              alt="wahl-3">
+          </div>
+          <div class="details">
+            <div class="tile">
+              <div class="name">WAHL</div>
+              <div><i class="fa fa-heartbeat" aria-hidden="true"></i></div>
+            </div>
+            <div class="tile">
+              <div>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <div class="price">$29.99</div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <section class="trimming">
+      <div><img
+          src="https://lh3.googleusercontent.com/EXmg5U3BMaj-qCv2eRQVWCAdnD2lbzNtgityDV5sqpSyZYyiS3Kv64u4ykcIeAnN392dyAYhlq5ATTF8TsPgDgw6D0_LAIFZJpXvYmFeSEN4S-DKHtEVv1NJrKhEsW-IGEcFCWivKmNRnCkvtOO2h6Ta5SDfWI6WaK6eaPdYfGHmMZR-pAT54NJwQt64tejah3Av1zNLOBWsyQoxyoxSQFiT5YBLCPHZrfiJzxavlCd9Nek-iBkmDl-1ip2jxsl2S1oLGuRHTIVLC02Z1ceFYM9v3A8fDkKD1bUMdV_tOSyfZmoJE0BBguLO-OkcsBPZl2dC0fEVyB-vhaXeQW8BzXdx_Rbxq9B-cZPZRY-31sQoNjizfTgs4vW1hU3CnNzInTi9TJC1z1mL83MT9fTnZCE-wlolU7s4ZzrpAxSeGoib1zyueByfzmTSVnIVx-uPeWti6Qr9pCRGw2Anj6ezptyzYNEYzNgHT2tzP9QOQ7kuq0p6VcrTbibRX5jeRjC9uk9CfzrzmGEJpzJA4W1vHFAfNzZ94izSEU3p-ugcL-iOIrb0DqWGMUIWQz3HcaJZ4gt3wvuhkivyAL7mUm_ZXt2rqJLexV19CT0SIjoN0pNiCLEFp0r6KKvV5ewmtzyxhbYNkSTT08er61UBxWVOxbTF6Yh_ExZi92wTbwxEMw-Ru_mLalW4qgJmYeHTab_cikgCqwur3heCM20_XJWFc6Y=w698-h344-no?authuser=3"
+          alt="man-trimming" width="100%"></div>
+      <div class="popup" id="popup">
+        <div class="inside">
+          <h3>Quality Product</h3>
+          <p class="text__justify">We are providing best quality of trimmer. We can promise you about this product. Hope you will like our product and services. We are world’s most popular trimmer
+            manufacturer.</p>
+          <button type="button" class="learn__more">Learn more</button>
+        </div>
+        <div class="cross">
+          <i class="fa fa-times text-white"></i>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class=" app__footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-4 d-flex flex-column align-items-center">
+          <div class="d-flex align-items-center"><img src="svg/logo.svg" alt="logo-footer"><span class="h3 px-2 m-0">Race Shop</span></div>
+          <div class="footer__title">About</div>
+          <p class="px-4 text-center text__justify">It’s a painting company. We are providing best color painting service all over the world. Visit our page to learn more about us.</p>
+          <div class="social">
+            <a class="link" href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+            <a class="link" href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+            <a class="link" href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a class="link" href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="col-xl-4">
+          <div class="d-flex justify-content-center">
+            <div class="footer__title">Pages</div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <ul class="anchor">
+                <li class="item"><a class="link" href="#">Blog</a></li>
+                <li class="item"><a class="link" href="#">Policy</a></li>
+                <li class="item"><a class="link" href="#">Why colors</a></li>
+                <li class="item"><a class="link" href="#">Company</a></li>
+                <li class="item"><a class="link" href="#">Client</a></li>
+              </ul>
+            </div>
+            <div class="col-6">
+              <ul class="anchor">
+                <li class="item"><a class="link" href="#">About</a></li>
+                <li class="item"><a class="link" href="#">Product</a></li>
+                <li class="item"><a class="link" href="#">Contact</a></li>
+                <li class="item"><a class="link" href="#">Sideview</a></li>
+                <li class="item"><a class="link" href="#">Manage Cart</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4">
+          <div class="d-flex justify-content-center">
+            <div class="footer__title">Download</div>
+          </div>
+          <div class="px-5 py-2">
+            <a class="store__link" href="#"><img src="svg/play-store.svg" alt="play-store"></a>
+          </div>
+          <div class="d-flex justify-content-end px-5 py-2">
+            <a class="store__link" href="#"><img src="svg/app-store.svg" alt="app-store"></a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 d-flex justify-content-end py-4">
+
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col">
+          <div class="copyright d-flex flex-xl-row flex-column justify-content-between align-items-center mb-xl-5">
+            <p>@2021 Copyright all right reserved.</p>
+            <div class="payment__method"><img width="100%" src="svg/payment-method.svg" alt="payment"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- jQuery + bootstrap + scrollreveal + app js -->
+  <script async src="../../js/jquery-3.5.1.min.js"></script>
+  <script async src="../../js/bootstrap.bundle.js"></script>
+  <script async src="../../js/scrollreveal.js"></script>
+  <script async src="js/app.js"></script>
+</body>
+
+</html>
