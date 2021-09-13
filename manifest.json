@@ -5,7 +5,8 @@
   "start_url": "https://hexui.netlify.app",
   "display": "standalone",
   "color": "#202124",
-  "background_color": "#fff",
+  "background_color": "#ffffff",
+  "theme-color": "#ffffff",
   "description": "Custom HTML Templates",
   "developer": {
     "name": "Santo Khan",
