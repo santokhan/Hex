@@ -53,8 +53,9 @@ body {
 }
 .app__header .app__navbar {
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns: auto auto auto;
   grid-template-rows: 1fr;
+  justify-content: space-between;
   width: 100%;
 }
 .app__header .nav__container {

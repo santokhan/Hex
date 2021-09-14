@@ -1,8 +1,8 @@
 {
   "name": "HEXUI",
   "short_name": "HEX",
-  "url": "https://hexui.netlify.app",
-  "start_url": "https://hexui.netlify.app",
+  "url": "https://hexui.netlify.app/",
+  "start_url": "https://hexui.netlify.app/",
   "display": "standalone",
   "color": "#202124",
   "background_color": "#ffffff",
@@ -45,12 +45,6 @@
       "src": "img/touch/512.png",
       "sizes": "512x512",
       "type": "image/png"
-    }
-  ],
-  "related_applications": [
-    {
-      "platform": "play",
-      "url": ""
     }
   ]
 }

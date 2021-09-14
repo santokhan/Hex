@@ -31,7 +31,7 @@
   } themeToggler();
 }
 
-{
+{/**Dropdown Menu */
   function dropDown() {
     const toggler = document.getElementById("navToggler");
     const targetId = toggler.attributes["data-target"].value;
@@ -42,7 +42,7 @@
         istoggle = true;
         target.classList.add("expand");
         toggler.style.transform = "rotate(-45deg)";
-        console.log(target);
+        //console.log(target);
       } else {
         istoggle = false;
         target.classList.remove("expand");
@@ -50,8 +50,34 @@
       }
     }
     toggler.addEventListener("click", showHide);
+
+    /**Close dropdown onclick outside */
+    try {
+      function closeDropdown() {
+        function hide(event) {
+          //console.log(event.target.matches(".toggler__img"));
+          /**if target does not match class of toggler (".toggler__img") > then
+           * then > if target does not match class of dropdown (".expand") or (".app__nav") > then 
+           * then > if classlist contains expand remove expand.*/
+          if (event.target.matches(".toggler__img") === false) {
+            if (event.target.matches(".app__nav") === false) {
+              if (target.classList.contains("expand") === true) {
+                /**Hide onclick outside. I have called showHide() beacuse i have to rotate toggler also*/
+                showHide(); //console.log(event.target);
+              };
+            }
+          }
+        }
+        window.addEventListener("click", hide);
+      } closeDropdown();
+    } catch (err) {
+      console.log(err);
+    }
+
   } dropDown();
 }
+
+
 
 {
   function scrollFunc() {
