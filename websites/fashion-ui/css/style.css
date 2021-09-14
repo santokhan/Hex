@@ -25,6 +25,20 @@ body {
   margin: 0;
   padding: 0;
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  width: 100%;
+  color: white;
+}
+::-webkit-scrollbar-thumb {
+  width: 100%;
+  background-color: #555;
+  border-radius: 1rem;
+}
+
 *,
 *::before,
 *::after {
