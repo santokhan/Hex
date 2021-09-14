@@ -12,183 +12,15 @@
   <link rel="icon" href="../../svg/favicon.svg">
   <title>Realestate</title>
   <style>
-    :root {
-      --default-shadow-color: rgba(0, 0, 0, 0.6);
-    }
 
-    .app__header {
-      z-index: 1020;
-      position: fixed;
-      top: 32px;
-      left: 0;
-      width: 100%;
-      height: 54px;
-      color: #fff;
-      display: flex;
-      justify-content: center;
-      transition: all 0.25s ease-out;
-    }
-
-    .app__header .app__nav {
-      width: 1140px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 1rem;
-      background-color: red;
-      border-radius: 16px;
-      background: var(--default-shadow-color);
-      backdrop-filter: blur(4px);
-      transition: width 0.25s ease-out;
-    }
-
-    .app__nav .logo {
-      max-width: 72px;
-      align-items: flex-end;
-      padding-top: 12px;
-    }
-
-    .app__header .app__nav .link {
-      color: white;
-      text-decoration: none;
-      font-weight: 400;
-      margin: 0 1rem;
-    }
-
-    .app__nav .link:hover {
-      opacity: 0.8;
-      transform: scale(0.95);
-      transition: transform 0.25s ease-out;
-    }
-
-    .airplane {
-      position: fixed;
-      width: 220px;
-      left: 300px;
-      top: 64px;
-      z-index: 1021;
-      cursor: pointer;
-      transform: translateX(0) translateY(0);
-    }
-
-    .airplane__fly {
-      animation: plane 1s ease-in forwards;
-    }
-
-    @keyframes plane {
-      100% {
-        transform: translateX(500px) translateY(-300px);
-      }
-    }
-
-    /* _______________________App main_______________________ */
-    .app__home {
-      position: relative;
-      background: #555 url("https://lh3.googleusercontent.com/ACP-hdUmYjXN3o1v39oRF_sDSimJvPz1cIFUTeV8rHm2eMsDEuCvItpezKiGiRn2eTTh8n5WGCtEG42gAk7yj8IS_JpuOcNYwpuU2GyzMkXf26UbxxoGQfMKhZVRLmOmBNWmVJfDuHFEgYgMIT4G6p8KRK7EreiU3K5uoVsNpJsuJYA_0xnbH8jl1Zs9rGhNzUy59_nczyCecPadti4VVZZl7jBdKh4Xj4P9i4pL8Ubfl-oJDFrFdZePih3en5SSVuKD42GgYP6mTNbHVYdqoH7t8Mb-iLQdVQ0_030PLlWLpH4g1VQ3EA3fY7sz-H0guMUVBU8P3tceW7X3XBhQqa8d92QCxQAtXmshlJ2CS5deeU6lxbfQDroj0Vc_ncDr02JRyvYCHvXDUByDPXccDrkf8cYjLW_1yNh0eC7SJHjGuuWU9UVMucSV1V3tdPRav7TMEaGo8gszLALWFsgg_W-PFAho73Atoip2s7okEgTri_w8a-QoFhDCnrPbMdQhAvZ-QT5AIsyHHP-pPgL4yV22e1hcWPCdf2e8N9C4-O4b2j5IpbedOA3izbJHqefaLB16pSxOboWRn8IfWpwGiQU9q39Vt2NWt9BBT8I-D43mOV8hcIHx53OW7RBM9Q7aMS9ZhYsoltcuvGRFQpodls8okHOkyMwbVhJqG9rW8iizHF2en-cXBsyHU6oijPlulU4WvYH23lbt3KaJqpVcZ8E=w1272-h795-no?authuser=3") no-repeat;
-      background-size: cover;
-      height: 100vh;
-      width: 100%;
-    }
-
-    .social {
-      position: absolute;
-      right: 0;
-      top: 50%;
-      width: 48px;
-      transform: translateY(-50%);
-      background: var(--default-shadow-color);
-      backdrop-filter: blur(4px);
-      z-index: 100;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 1rem 0;
-      border-radius: 1rem 0 0 1rem;
-    }
-
-    .social .item {
-      color: white;
-      font-size: 1rem;
-      margin: 0.5rem 0;
-      text-shadow: 0 2px 0 var(--default-shadow-color);
-      text-decoration: none;
-      transform: scale(1);
-      transition: transform 0.25s ease-out;
-    }
-
-    .social .item:hover {
-      text-shadow: 0 0 0 var(--default-shadow-color);
-      transform: scale(1.4);
-      transition: transform 0.25s ease-out;
-    }
-
-    .banner {
-      position: absolute;
-      right: 10%;
-      bottom: 10%;
-      width: 360px;
-      height: 180px;
-      background: var(--default-shadow-color);
-      backdrop-filter: blur(4px);
-      border-radius: 1rem;
-      padding: 1.5rem;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.3);
-    }
-
-    .banner p {
-      text-align: justify;
-      margin: 0.25rem 0;
-    }
-
-    .section__title {
-      font-size: 2rem;
-      font-weight: 600;
-    }
-
-    .section {
-      margin-top: 72px;
-    }
-
-    .app__footer {
-      margin-top: 72px;
-      background: #555 url("https://lh3.googleusercontent.com/LFA3h6qW7gKusnOADSSdB0EO392DcAbonPo3d93kaQ5aLfxqqMK0WhCD6Wz6nwiLa5JC1G80WE-lN2urmRvpPWdUMgFQTWjDe2gL2XNGew6ckpbIVwOnbt4iHi0zhtZfKFi6LzCleSCYLYc4gOjsNI38GCuCf0wdwCPF5TtkHaUfX6tTq-zCkdgOIvTVPfV5WC3lRX_gYq-H-DTsi5NZGKIpDVm9FQdTpvqW3HMqTiORjpPes8t9_EeAML4huEsv75g237cZikT5-jMhyBOXCUoDG6cf0pNfKmevAL4Xe09a1Foak133gE_FJh9vYUof0ik0ZWJN--w7BEtxRuot5K9x4NqoRdyq6OKGPHMngpTEIFI_no84j0Q8kGBXNGBpN2xadngKlHrNETzTD8CMyGSD89k6jXwKoSOuXubdGEKVc9pczjUcIDmntCZUEhA5PxD6iylQr0kD2ArIMe4Aa9lKAFqamyWqdXIdFQGSNmm95GYhVXQx5nc4zfUTZ8BPgR5DAg9OcUO-M54wl6nCuEU2bCJUimk1x-hLRI2AQ2Cl83hzEck_viYwbY3IkuCSPG5tWCpSVQm9fimkSj9FMBjoj5n6g82CSRLRR6jrwzOWZgN8Z6Go2cbcv8tdq-MGv7jIy4Lz8yO1hdVrNqP7W6A4sW1seQ6ezlTDTFIYbt87SGQjucCbH8A1GCGKEv08uhOdKlZkv7PgFr0MZJzF-HQ=w858-h298-no?authuser=3") no-repeat;
-      background-size: cover;
-      position: relative;
-    }
-
-    .footer__link {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-    }
-
-    .app__footer .effect {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.3);
-    }
-
-    .footer__link .link {
-      text-decoration: none;
-      color: white;
-    }
   </style>
 </head>
 
 <body>
   <div class="airplane" id="airplane">
-    <img src="img/plane.png" width="100%" alt="airplane">
+    <img
+      src="https://lh3.googleusercontent.com/9Ijptx697GRG_dQp5XqOnZEmmwBRq6E5UODSs_3bIiZqO5yN_d9ukm8zkLeNRvwL5sWFIGqBmGBPj204Ks0h4JIeoSf6ibC6OTDRh-Z489QWprUdVO8lgaIyVb_Irfb7FQk4pVu9dKz8L14U0jHs-zZqeEClrW4hRGt0mPGvYm7HRINQaJn-u1JLNXb69W1zFll4c1tDFsrCRjgBonC6KUEl-bka9bbrdXWaZA39z6MlgetuIEBD8IEWyTQT7WoLhW2y7rJ7oCL8rlOs95fz-W5opJvgxh21yEcXSwXZAi1SXJZXtXjz1oe7r_PzbdFmgyKg38fhsu787Z3MjPunlkguhCMlB699HXVAqJ9MHXlHNWAjZoaxbqmvRe8YTekFrRPYAgbRq5wriytmCrJF99vBBHAGdJCmP00CnZRa5E_xN281H9WStNS6nWnRZS-hgQFUAYFASp5bGRLTBEKPyTJEmmOk00ElqPGTHi3uvKrOfBAN-XIJjk9zANC-2gFMXSgmQVuI3mdITeF6FdSMt40hrkT0hroKdJgPsNzIofYKwRNKlHBfEBkXK-xVHZbsr4NWTwhe2DdJF1AjAtM26OQ7M1seGwEIZ4pptKKwGrazKo8nwKbs16alDoMVkos91YxU9AKDJs4bm0u9PgdfVGlqePLR3LWG9jii1PwwilpWbkynZCIKo3bzc5B97fp_dODiknjQMOZ0-Bh_JAb0WVk=w220-h102-no?authuser=3"
+      width="100%" alt="airplane">
   </div>
   <header class="app__header" id="appHeader">
     <nav class="app__nav" id="appNav">
@@ -237,7 +69,9 @@
       <div class="container">
         <div class="row d-flex align-items-center">
           <div class="col">
-            <div><img src="img/home-snow.png" alt="home-usa"></div>
+            <div><img
+                src="https://lh3.googleusercontent.com/0uf1HHRiw_ZVQmCdVuFD1faz4ZYx6U28wX7tUmFBfhQvHXWZ3V3DaAhCvTBSaGsFx_vxgGslZPVwoO-fqPWp-GlBwHMqR6h-HaawyzrFdpaM07agrGl8kCA9yzKHqmmxrOVm0dNbtDfHx4CLq3ugIeh3-QbFCa68SkpRZ8rHnBnxNd9xlIrSpAahdN6gae4cqwlUbrXubXne7nRULJjtJoSd0eN9zHkwwYTzrRHM0Yc_3syga_odjLzbb9ciL5vyxQ0W6tg9o9_KFuYn_nqy1_DuVlVG_AYB5X2ZWBmEmMZ5fT6j9qtgkUtncnydSBaOeABPVv3QyRYtfXgg7JIKSP-cK1sdGp01dDOtEfwCFRaVhXoq216wDih9NfvQNnEORkwRxf7_X9gZsNetaRJ26OzdHFf3BwWvAb51Sl1rT6dv-4mLziTgoGwPaeM5NpwF2yoW4PH4EI8eNuu9aA6eTD2jdGxHdLZSSVSM5kU7KpDnyvRcOGFE74C8dYZiwtasRnOLSmFz3LiW1c_naDmWEITjDtxe0h4TICVMr-CZ8LxHcy3KOETVnbtouk_R--ZeMJ4uRK8oTGtfJ87OwbHJ7eNOiiU1u04QlDrOrIb0xMQXnI6D-e1EzXBCVGbOfb63Vbs4kSL8USp740VAeeN0se5Whis0PLpVHvYVPXWmQrk1NGIUVHAXiRYV6rP-dR5xp82ku89M_U_Ng0hmBHCivfY=w530-h372-no?authuser=3"
+                alt="home-usa" width="100%"></div>
           </div>
 
           <div class="col">
@@ -282,7 +116,9 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <img src="img/home-alaska.png" alt="home-in-alaska">
+            <img
+              src="https://lh3.googleusercontent.com/JsUBL9c_zmz_HTImj2dHrgm1iHzz_7MbElVmpE8edk2DloE_Wq7j8I-zzCi8YWtFNsjzqXzRTu1Fc3vmCIZyt3O51D7s6JexzaDXre1WQId4RZxzsKNwzupUVq3wec3yOQ8G73ON9WPV9bdVRK1VkuLRSucsmeOT9xu3esLH71qkdu3Wpa6oSx5GRNjdL-jp_K_OSLDvy0jzSqN4kLdpIKe6fyC23zd7AC8YgiXzL-HTkpJm7Zo6w1ylPdPmrSQrkM13SQBGubV8QH1iqBV9FrvCeU3rkLRraJsn8Z5faIx9nw2U5HpTW1ZI8JEp7oyqtQ4Xvu_RXd9-ku-6iDI7CjstOvV01rcoObhQ-2uKM3NE6_8Egj-par0qg8Ocgm6MvA_7vNK58IjH8NZhGcG5ojn7VsS1gshQDy1sVMCeVSU7S1bToDrWdd7nzr2VLvPFAPfNVIDMOD-WIfJI4qVqLoQYw1PSHA47472yMgr5-kFuqxbH6vWd4IZIXNeGv2KRSJ6E4oL_mexu7jEsto-WCwGIP8tyopknoJWXZ7gqqHZYp3JD7qbM3THBHI1BxB3kTrKc-sjFQPxndLYjy4dQlK8H-4x9ZWGbUt6yQjwh8H2quMY7V8U83JmxJGhcrSsn9M-DXek2qoXuCKfaXD5NXHWkLrd5T84djlp4hQNp0MoTCwO4tMUtnnnE7wlcdoGShN3wt5CEuM5ibtw8CLfHggg=w1136-h639-no?authuser=3"
+              alt="home-in-alaska">
           </div>
         </div>
       </div>
@@ -310,7 +146,9 @@
           </div>
 
           <div class="col">
-            <div><img src="img/home-usa.png" alt="home-usa"></div>
+            <div><img
+                src="https://lh3.googleusercontent.com/2TqJup9-smFFdvLKsXW3rav3uwtJ_i2j6X8r-4OOAMzucYTorcuwtQsqhgBCgN5uwfc7-kabiu4Adc1KIoNY3IqNU-R0AKOmY66lHqeMc9tjdejCJ_r9AUoa_jRBuBGn94uWY2itxM3uvd8zSdaFG5XbhfvhsV7VUR21mbHPAGX3Wy-6Zg4tMKUPOGJ7BrS0pLOOlbSgGiXG1kgnrs1dPCu4A26nD5gTxMCwrJ_8RyMBg98r3kCdmtEzvHCvBbasbqN2IpUACMJN-APdYTvy_HZyhGSsJwiTTPuzLa3oZrH6iQTr-2ER1hmPKIwKExbMfnf_QDqap5g6EsTK5NJd0r3tZMux_UP1Rb3Gwm8YG1jLgDMLOmvrenfIHAJr8xOvR9_MjxJZVgNYgHadcgi-EFYmF5HCMi0N7woMCvd0mZYhz8v4csvRhYV4V9r-F3ZI8sEA7orfFLbo4arOKQRNmBFXuw5vXWPoCf2Z4m47eb7P764qSiL1-LK4KtkzZfztBUrfJwleuUx4Jn877-_IH5qeBw2_9Y4z5AWvQpL9EGTz0WMTY84_MU2A6cThHV0CxgqGyhLcC8b4qJGjUFgsab9ZBo0glYQ3vmSMUGJe3rYlfAPS2r-vQUxR8EEuQx65XQEge9jms7QSAqXv9W9-Z0Z2bkyhbaJqVIqf9SWMir82s7R30LVtnPfBGV_GBYlRFwnFQfYxmyKweS1HoqqYFjg=w554-h378-no?authuser=3"
+                alt="home-usa" width="100%"></div>
           </div>
         </div>
       </div>

@@ -178,7 +178,7 @@ function gridItemsData(props) {
     { name: "Ecommerce Store", href: "./websites/trimmer/index.html", src: "https://live.staticflickr.com/65535/51439618692_e467012815_c.jpg", },
     { name: "Fashion", href: "./websites/fashion-ui/index.html", src: "https://live.staticflickr.com/65535/51441114009_b68ba1515a_c.jpg", },
     { name: "Painter", href: "./websites/colors/index.html", src: "https://live.staticflickr.com/65535/51441330750_ccee079c3c_c.jpg", },
-    { name: "Race Store", href: "#", src: "https://live.staticflickr.com/65535/51440617983_3238a859e6_c.jpg", },
+    { name: "Real Estate", href: "./websites/real-estate/index.html", src: "https://live.staticflickr.com/65535/51440617983_3238a859e6_c.jpg", },
     { name: "Interior", href: "#", src: "https://live.staticflickr.com/65535/51441112794_65cfe57c44_c.jpg", },
     { name: "Theme Builder", href: "#", src: "https://live.staticflickr.com/65535/51440618558_37c5c3f71b_c.jpg", },
     { name: "Games", href: "#", src: "https://live.staticflickr.com/65535/51439617527_27d664d8b1_c.jpg", },
