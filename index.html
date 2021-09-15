@@ -39,7 +39,6 @@
   <div id="fb-root"></div>
   <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v12.0&appId=777518929519792&autoLogAppEvents=1" nonce="PsyAxyTf"></script>
 
-
   <header class="app__header">
     <nav class="app__navbar">
       <div class="nav__container">
@@ -99,24 +98,37 @@
       </div>
     </section>
 
-    <style>
-      .social__share {
-        display: flex;
-        justify-content: center;
-        padding: 2rem 0;
-        /* background-color: rebeccapurple; */
-      }
-    </style>
+    <!-- Social Media Link Sharing -->
     <section class="social__share">
       <!-- Facebook Share Button -->
       <div class="facebook">
         <div class="fb-share-button" data-href="https://hexui.netlify.app" data-layout="button_count" data-size="small"><a target="_blank"
             href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhexui.netlify.app%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
-        <script>
-          document.querySelector(".fb-share-button").setAttribute("data-href", document.URL);
-        </script>
+        <script>document.querySelector(".fb-share-button").setAttribute("data-href", document.URL);</script>
       </div>
-      <div class="twitter"></div>
+
+      <!-- Twitter Share Button -->
+      <div class="twitter">
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div>
+
+      <!-- Twitter Share Button -->
+      <div class="linkedin">
+        <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+        <script type="IN/Share" data-url="https://hexui.netlify.app"></script>
+      </div>
+
+      <!-- Pinterest Save Button -->
+      <div class="pinterest">
+        <a href="https://www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark"> </a>
+      </div>
+
+      <!-- Email Share Button -->
+      <div class="email">
+        <a class="email__share__button" href="mailto:?subject=I wanted you to see this site&amp;body=Check out this site http://hexui.netlify.app" title="Share by Email">
+          <img style="padding-right: 4px;" src="http://png-2.findicons.com/files/icons/573/must_have/48/mail.png" height="16">Email</a>
+      </div>
     </section>
 
     <section class="app__collection" id="appCollection">
@@ -242,6 +254,9 @@
   <script defer src="js/bootstrap.bundle.js"></script>
   <script defer src="js/scrollreveal.js"></script>
   <script defer src="js/app.js"></script>
+
+  <!-- Pinterest -->
+  <script type="text/javascript" async defer src="//assets.pinterest.com/js/pinit.js"></script>
 </body>
 
 </html>
