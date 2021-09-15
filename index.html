@@ -35,6 +35,11 @@
 </head>
 
 <body data-theme="light">
+  <!-- Facebook Share Button -->
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v12.0&appId=777518929519792&autoLogAppEvents=1" nonce="PsyAxyTf"></script>
+
+
   <header class="app__header">
     <nav class="app__navbar">
       <div class="nav__container">
@@ -94,7 +99,27 @@
       </div>
     </section>
 
-    <section class="app__collection mt-5" id="appCollection">
+    <style>
+      .social__share {
+        display: flex;
+        justify-content: center;
+        padding: 2rem 0;
+        /* background-color: rebeccapurple; */
+      }
+    </style>
+    <section class="social__share">
+      <!-- Facebook Share Button -->
+      <div class="facebook">
+        <div class="fb-share-button" data-href="https://hexui.netlify.app" data-layout="button_count" data-size="small"><a target="_blank"
+            href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhexui.netlify.app%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+        <script>
+          document.querySelector(".fb-share-button").setAttribute("data-href", document.URL);
+        </script>
+      </div>
+      <div class="twitter"></div>
+    </section>
+
+    <section class="app__collection" id="appCollection">
       <div class="container">
         <div class="row collection__ui pb-5 d-xl-flex d-none">
           <div class="col d-flex justify-content-center">
