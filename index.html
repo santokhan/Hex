@@ -4,9 +4,13 @@
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#202124">
   <meta name="description" content="Custom HTML Templates Design">
+
+  <!-- Google Integrated SignIn -->
+  <meta name="google-signin-client_id" content="540400975447-na2kte9ad4i31tj9309ms9dtltkkeaf3.apps.googleusercontent.com">
 
   <!-- CSS Syles -->
   <link rel="stylesheet" href="css/bootstrap.css">
@@ -23,6 +27,7 @@
   <link rel="icon" href=" svg/favicon.svg">
   <title>HEX</title>
 
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-2SQVR492G6"></script>
   <script>
@@ -185,7 +190,9 @@
       </div>
     </section>
   </main>
-
+  <div class="d-flex justify-content-center">
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+  </div>
   <footer class="app__footer">
     <div class="container">
       <div class="row">
