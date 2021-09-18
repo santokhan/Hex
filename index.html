@@ -40,7 +40,7 @@
       console.log('Image URL: ' + profile.getImageUrl());
       console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
       */
-      userData.push({ id: profile.getId(), name: profile.getName(), url: profile.getImageUrl(), email: profile.getEmail() });
+      userData.push({ name: profile.getName(), url: profile.getImageUrl(), email: profile.getEmail() });
     }
   </script>
 
