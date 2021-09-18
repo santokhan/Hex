@@ -30,6 +30,8 @@
   <!-- Google Integrated SignIn -->
   <script src="https://apis.google.com/js/platform.js" async defer></script>
   <script>
+    const userData = [];
+    localStorage.setItem("googleuser", userData);
     function onSignIn(googleUser) {
       /*
       var profile = googleUser.getBasicProfile();
@@ -38,7 +40,7 @@
       console.log('Image URL: ' + profile.getImageUrl());
       console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
       */
-      localStorage.setItem("googleuser", profile);
+      userData.push({ id: profile.getId(), name: profile.getName(), url: profile.getImageUrl(), email: profile.getEmail() });
     }
   </script>
 
